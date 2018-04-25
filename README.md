@@ -20,12 +20,12 @@ docker build --rm=true --no-cache=true  --force-rm=true -t your_image_name:tag .
 ```
 ### How to use
 
-######Volume backup:
+###### Volume backup:
 
 ```
 docker run -v [volume_name]:/volume -v [output_dir]:/backup --rm onedsol/rsync backup
 ```
-######Volume restore:
+###### Volume restore:
 
 ```
 docker run -v [volume_name]:/volume -v [source_dir]:/backup --rm onedsol/rsync restore
@@ -39,7 +39,7 @@ docker run -v [volume_name]:/volume -v [source_dir]:/backup --rm onedsol/rsync r
 we use a date pattern at the end of this path, very useful if you want to make backups per days.
 * *backup/restore*: Those options specify the operation you want to make (backup or restore)
 
-###Note:
+### Note:
 
 Very important note, take care of output and source paths because this script delete all data in restore process and 
 overwrite data in backup process.
