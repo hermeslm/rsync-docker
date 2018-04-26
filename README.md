@@ -7,9 +7,7 @@ Using rsync to copy container named volume data, very useful to make volume back
 * It provides proper progress information (with --info=progress2).
 * Only sync differences.
 
-I taked from this useful post: http://blog.diovani.com/technology/2017/06/24/moving-docker-containers-data.html
-from this repo too: https://github.com/loomchild/volume-backup and I did a merge in one solution, creating a simple
-backup and restore docker container using rsync. 
+I have taken from this useful post: http://blog.diovani.com/technology/2017/06/24/moving-docker-containers-data.html, from this repo too: https://github.com/loomchild/volume-backup and I did a merge in one solution, creating a simple backup and restore tool docker container using rsync. 
  
 
 ### How to build as you own image
@@ -41,5 +39,4 @@ we use a date pattern at the end of this path, very useful if you want to make b
 
 ### Note:
 
-Very important note, take care of output and source paths because this script delete all data in restore process and 
-overwrite data in backup process.
+Very important note, take care of output and source paths because this script delete all data in restore process and overwrite data in backup process.
