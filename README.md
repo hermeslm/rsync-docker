@@ -23,12 +23,12 @@ docker build --rm=true --no-cache=true  --force-rm=true -t your_image_name:tag .
 ###### Volume backup:
 
 ```
-docker run -v [volume_name]:/volume -v [output_dir]:/backup --rm onedsol/rsync backup
+docker run -v [volume_name]:/volume -v [output_dir]:/backup --rm onedsol/rsync:2.0 backup
 ```
 ###### Volume restore:
 
 ```
-docker run -v [volume_name]:/volume -v [source_dir]:/backup --rm onedsol/rsync restore
+docker run -v [volume_name]:/volume -v [source_dir]:/backup --rm onedsol/rsync:2.0 restore
 ```
 
 ### Explaining The Command

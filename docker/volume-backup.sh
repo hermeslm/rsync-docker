@@ -7,7 +7,8 @@ usage() {
 
 backup() {
 #    docker run -v [volume-name]:/volume -v [output-dir]:/backup --rm onedsol/rsync backup
-    rsync -avz --backup --info=progress2 /volume/./ /backup
+    FOLDER="$(date +"%Y-%m-%d")"
+    rsync -avz --backup --info=progress2 /volume/./ /backup/${FOLDER}
 }
 
 restore() {
