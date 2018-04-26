@@ -6,13 +6,13 @@ usage() {
 }
 
 backup() {
-#    docker run -v [volume-name]:/volume -v [output-dir]:/backup --rm onedsol/rsync backup
+#    docker run -v [volume-name]:/volume -v [output-dir]:/backup --rm onedsol/rsync:2.0 backup
     FOLDER="$(date +"%Y-%m-%d")"
     rsync -avz --backup --info=progress2 /volume/./ /backup/${FOLDER}
 }
 
 restore() {
-#    docker run -v [volume-name]:/volume -v [output-dir]:/backup --rm onedsol/rsync restore
+#    docker run -v [volume-name]:/volume -v [source-dir]:/backup --rm onedsol/rsync:2.0 restore
     rm -rf /volume/* /volume/..?* /volume/.[!.]*
     rsync -avz --backup --info=progress2 /backup/./ /volume
 }
