@@ -2,12 +2,12 @@
 
 Using rsync to copy container named volume data, very useful to make volume backups, this could be achieved using cp from inside a container or even docker cp, but I decided by rsync for some reasons:
 
-* It is incredibly fast
+* It is incredibly fast.
 * It’s more reliable to copy large files or directories and it allows stop and resumes if needed.
 * It provides proper progress information (with --info=progress2).
 * Only sync differences.
 
-I have taken from this useful post: http://blog.diovani.com/technology/2017/06/24/moving-docker-containers-data.html, from this repo too: https://github.com/loomchild/volume-backup and I did a merge in one solution, creating a simple backup and restore tool docker container using rsync. 
+I have taken from this useful post: http://blog.diovani.com/technology/2017/06/24/moving-docker-containers-data.html, from this repo too: https://github.com/loomchild/volume-backup and I did a merge in one solution, creating a simple backup and restore tool docker container based using rsync. 
  
 
 ### How to build as you own image
